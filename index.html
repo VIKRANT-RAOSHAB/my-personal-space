@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A personal corner of the internet: interests, life notes, learning, and projects.">
+  <title>My Personal Space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="My Personal Space home">
+        <span class="brand-mark">✳</span><span>my personal space<span class="brand-dot">.</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#blog">Journal</a>
+        <a href="#journey">Journey</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> A little corner of the internet</p>
+          <h1>Hi, I'm <span class="gradient-text">figuring it out.</span></h1>
+          <p class="hero-lede">A space for the things I'm learning, the things I love, the moments I want to remember, and the person I'm becoming.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#about">A little about me <span>↗</span></a>
+            <a class="button secondary" href="#blog">Read my journal</a>
+          </div>
+          <div class="hero-meta"><span>✦ Curious by nature</span><span>⌘ Always learning</span><span>♡ Becoming, slowly</span></div>
+        </div>
+        <div class="hero-art" aria-label="Decorative abstract night-sky illustration">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="planet"></div><div class="spark spark-one">✦</div><div class="spark spark-two">✧</div>
+          <div class="art-label label-top">LEARNING IN PUBLIC</div>
+          <div class="art-label label-bottom">VERSION 1.0 · STILL GROWING</div>
+        </div>
+      </section>
+
+      <section class="intro-strip">
+        <span class="strip-label">CURRENT CHAPTER</span>
+        <p>College, code, big questions, small wins, and trying to make the most of the journey.</p>
+        <span class="strip-star">✳</span>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-heading">
+          <div><p class="eyebrow">01 / THE PERSON BEHIND THE PAGE</p><h2>A little <span class="gradient-text">about me.</span></h2></div>
+          <span class="section-number">01</span>
+        </div>
+        <div class="about-grid">
+          <article class="panel about-card">
+            <div class="avatar-placeholder">✳</div>
+            <p class="card-kicker">HELLO, WORLD</p>
+            <h3>I'm a work in progress.</h3>
+            <p>I'm a student who enjoys exploring ideas, learning new things, and building a future one step at a time. This page is where I can collect the pieces of that journey.</p>
+            <p class="edit-hint">Make this yours: add your name, background, values, and what you're working toward.</p>
+          </article>
+          <article class="panel values-card">
+            <p class="card-kicker">THINGS I BELIEVE</p>
+            <div class="value-row"><span class="value-icon">↗</span><div><h4>Progress over perfection</h4><p>You don't need everything figured out to begin.</p></div></div>
+            <div class="value-row"><span class="value-icon">⌁</span><div><h4>Stay curious</h4><p>Good questions can take you somewhere unexpected.</p></div></div>
+            <div class="value-row"><span class="value-icon">✧</span><div><h4>Keep building</h4><p>Small, consistent efforts become something meaningful.</p></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="interests">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 / THINGS THAT MAKE ME, ME</p><h2>Things I <span class="gradient-text">like.</span></h2></div>
+          <span class="section-number">02</span>
+        </div>
+        <p class="section-subtitle">A few things I'm into lately. Swap these cards for your real interests — this page should sound like you.</p>
+        <div class="interest-grid">
+          <article class="interest-card"><span class="interest-emoji">⌘</span><span class="interest-index">01</span><h3>Building with code</h3><p>Solving problems, learning DSA, and turning ideas into projects.</p><span class="tag">TECH</span></article>
+          <article class="interest-card"><span class="interest-emoji">✦</span><span class="interest-index">02</span><h3>AI & big ideas</h3><p>Exploring how intelligent systems work and what we can create with them.</p><span class="tag">CURIOSITY</span></article>
+          <article class="interest-card"><span class="interest-emoji">♫</span><span class="interest-index">03</span><h3>Music & downtime</h3><p>The playlists, games, and little breaks that make a busy week better.</p><span class="tag">OFFLINE MODE</span></article>
+          <article class="interest-card"><span class="interest-emoji">☼</span><span class="interest-index">04</span><h3>People & perspectives</h3><p>Learning from different lives, stories, and ways of seeing the world.</p><span class="tag">LIFE</span></article>
+        </div>
+      </section>
+
+      <section class="section blog-section" id="blog">
+        <div class="section-heading">
+          <div><p class="eyebrow">03 / NOTES FROM REAL LIFE</p><h2>The life <span class="gradient-text">journal.</span></h2></div>
+          <span class="section-number">03</span>
+        </div>
+        <div class="blog-toolbar">
+          <p class="section-subtitle">Thoughts, lessons, and moments worth keeping. New posts can be added in <code>posts.js</code>.</p>
+          <div class="filter-wrap"><label for="blogFilter" class="sr-only">Filter posts</label><select id="blogFilter"><option value="all">All entries</option><option value="Life">Life</option><option value="Learning">Learning</option><option value="Reflections">Reflections</option></select></div>
+        </div>
+        <div class="post-grid" id="postGrid" aria-live="polite"></div>
+        <p class="empty-state" id="emptyState" hidden>No posts in this category yet.</p>
+        <div class="blog-note"><span>✎</span><p><strong>Private drafts are okay.</strong> Write honestly for yourself first. Publish only what you're comfortable sharing publicly.</p></div>
+      </section>
+
+      <section class="section" id="journey">
+        <div class="section-heading">
+          <div><p class="eyebrow">04 / ONE STEP AT A TIME</p><h2>My <span class="gradient-text">journey.</span></h2></div>
+          <span class="section-number">04</span>
+        </div>
+        <p class="section-subtitle">A living record of what I'm learning and making. Add milestones as they happen — not just when everything is perfect.</p>
+        <div class="journey-layout">
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot active"></span><div><p class="timeline-date">RIGHT NOW</p><h3>Building the foundations</h3><p>Practising programming, DSA, and learning how to make things for the web.</p></div><span class="timeline-status">IN PROGRESS</span></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div><p class="timeline-date">UP NEXT</p><h3>Ship small projects</h3><p>Turn what I learn into useful projects, publish them, and improve with feedback.</p></div><span class="timeline-status">PLANNED</span></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div><p class="timeline-date">FUTURE ME</p><h3>Explore AI / ML</h3><p>Build stronger foundations in maths, software, and machine learning through real experiments.</p></div><span class="timeline-status">ON THE HORIZON</span></div>
+          </div>
+          <aside class="panel project-panel"><p class="card-kicker">PROJECT SPOTLIGHT</p><div class="project-icon">⌘</div><h3>My Personal Space</h3><p>The first project: a personal website that can grow with me.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a href="https://github.com/" target="_blank" rel="noreferrer" class="text-link">Add your GitHub link <span>↗</span></a></aside>
+        </div>
+      </section>
+
+      <section class="closing-quote">
+        <span class="quote-mark">“</span>
+        <p>I don't have to become everything today. I just have to keep moving.</p>
+        <span class="quote-credit">A NOTE TO MY FUTURE SELF</span>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand" href="#home"><span class="brand-mark">✳</span><span>my personal space<span class="brand-dot">.</span></span></a>
+      <p>Made with curiosity, a little code, and room to grow.</p>
+      <a href="#home" class="back-top">Back to top ↑</a>
+      <span class="copyright">© <span id="year"></span> · Just my little corner of the internet.</span>
+    </footer>
+  </div>
+  <script src="posts.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
